@@ -6,13 +6,14 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter command (e.g., add 5 3):");
-        String command = scanner.nextLine();
-        String[] input = command.split(" ");
 
-        String operation = input[0];
 
         Boolean keepRunning = true;
         while (keepRunning) {
+            String command = scanner.nextLine();
+            String[] input = command.split(" ");
+    
+            String operation = input[0];
             switch (operation) {
                 case "add":
                     System.out.println(calc.add(Integer.parseInt(input[1]), Integer.parseInt(input[2])));
